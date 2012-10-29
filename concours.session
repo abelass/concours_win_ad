@@ -1,0 +1,10 @@
+<!DOCTYPE webprojectsession>
+<webprojectsession>
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions>
+      <item column="0" line="0" url="exec/concours.php" />
+      <item column="328" line="12" url="prive/concours.html" />
+      <item column="3" line="18" url="generateur.html" />
+    </itemcursorpositions>
+  </session>
+</webprojectsession>

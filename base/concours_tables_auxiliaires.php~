@@ -1,0 +1,26 @@
+<?php
+
+if (!defined("_ECRIRE_INC_VERSION")) return;
+
+function concours_declarer_tables_auxiliaires($tables_auxiliaires){
+
+	$spip_concours_codes = array(
+		"id_code"			=> "bigint(21) NOT NULL",
+		"code"		=> "VARCHAR(255) NOT NULL",
+		"utilise"		=> "bool NOT NULL",		
+
+		);
+
+	$spip_concours_codes_key = array(
+		"PRIMARY KEY"		=> "id_code",
+		"KEY code"	=> "code",
+		);	
+		
+	$tables_auxiliaires['spip_concours_codes'] = array(
+		'field' => &$spip_concours_codes,
+		'key' => &$spip_concours_codes_key,
+	);		
+
+return $tables_auxiliaires;
+};
+?>

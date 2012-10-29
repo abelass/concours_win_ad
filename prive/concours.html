@@ -1,0 +1,34 @@
+<B_reponses>
+	<div class="liste-elements articles">
+		<table class='spip liste'>
+		<caption><strong class="caption"><:concours:reponses_corectes:></strong></caption>
+			<thead>
+				<tr class='first_row'>
+					<th class='titre'><:concours:titre:></th>
+					<th class='prenom'><:concours:prenom:></th>
+					<th class='nom'><:concours:nom:></th>	
+					<th class='email'><:concours:email:></th>
+					<th class='reponse_q_valeur_bon'><:concours:fieldset_question_1:></th>
+					<th class='reponse_q_classement'><:concours:fieldset_question_2:></th>	
+					<th class='reponse_q_nombre_bons'><:concours:fieldset_question_3:> en secondes</th>																										
+				</tr>
+			</thead>
+			<tbody>
+			<BOUCLE_reponses(CONCOURS_REPONSES) {id_reponse IN #ENV{reponses}} >
+			<tr>
+				<td>#TITRE</td>
+				<td>
+				[(#PRENOM)]
+				<td>
+				[(#NOM)]
+				</td>	
+				<td>#EMAIL</td>
+				<td>#QUESTION_1</td>
+				<td>#QUESTION_2</td>	
+				<td>#QUESTION_3</td>																								
+			</tr>
+			</BOUCLE_reponses>
+			</tbody>
+			</table>
+		</div>
+</B_reponses>

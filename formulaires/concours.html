@@ -1,0 +1,52 @@
+#SET{reg,#ARRAY{fr,3,nl,4}}
+<BOUCLE_doc(DOCUMENTS){id_article =(#GET{reg}|table_valeur{#LANG})}>
+#SET{doc_reg,#FICHIER}
+</BOUCLE_doc>
+
+<img id="logos_vert" src="squelettes/images/logos_vert.png" alt="Logos Sultana, Delacre, BN" width="130"/>
+<div class="formulaire_spip formulaire_projets_concours">
+
+[(#ENV{message_ok}|=={phase_2}|oui)#SET{message_phase_2,#ENV{message_ok}}]
+
+#SET{phase_2,#ENV{phase_2,#GET{message_phase_2}}}
+[(#GET{phase_2}|oui)
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	]
+[(#GET{message_phase_2}|non)
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	]
+[(#ENV{editable})
+	<form action="#ENV{action}" method="post" id="code_form" class="[(#GET{phase_2}|oui)phase2][(#GET{phase_2}|non)phase1]">
+		<div>
+			#ACTION_FORMULAIRE{#ENV{action}}												
+			[(#GET{phase_2}|oui)
+			<INCLURE{fond=formulaires/inc-formulaire}{env}/>
+			[(#GET{message_phase_2}|oui)
+			<ul>
+				[(#SAISIE{hidden,phase_2,defaut=#GET{message_phase_2}})]	
+				]
+			</ul>
+
+			<p class="boutons"><input type="submit" class="submit" value="<:spip:bouton_valider:>" /></p>]
+			
+			[(#GET{phase_2}|non)
+			<ul>
+			[(#SAISIE{input,code,label=<:concours:code:>,obligatoire=oui})]
+			[(#SAISIE{case,conditions_ok,label=<:concours:jaccepte:><a href="[(#GET{doc_reg})]" target="blank"><:concours:reglement:></a>,obligatoire=oui})]	
+			</ul>
+				<p class="boutons"><input type="submit" class="submit" name="phase_1" value="<:spip:bouton_valider:>" /></p>
+							
+				]
+		</div>
+	</form>
+	<div class="explications">
+	[(#GET{phase_2}|non)	
+		<span>* - <:concours:champ_obligatoire:>, </span><span>** - <:concours:champ_obligatoire_dipsonible:></span>
+		</div>
+		<div id="footer_produits">
+			<p><:concours:footer_produit:></p>
+		</div>
+		]
+	]
+	
+</div>

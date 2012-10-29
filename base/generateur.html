@@ -1,0 +1,16 @@
+#CACHE{0}
+fghjyuft
+<?php
+     
+     $i = 1;
+     $max = 410000;
+     while ($i <= $max) {
+		  $i++; 
+		  
+		 $code= substr(md5($i.date(), true), 0, 10);
+		 
+		 sql_insert('spip_concours_codes',array('code'=>$code));
+}
+     
+     
+?>

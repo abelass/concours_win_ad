@@ -1,0 +1,11 @@
+
+<div>
+<BOUCLE_selection(POUR){tableau #ENV{datas}}>
+<label for="#ENV{nom}_#CLE" id="#ENV{nom}[]">#VALEUR</label>
+<input type="#GET{type}" name="#ENV{nom}[#CLE]" class="#GET{type}[ (#ENV{class})]_#CLE" id="champ_#ENV{nom}_#CLE"[ value="(#ENV{valeur}|table_valeur{#CLE}})"][ size="(#ENV{size})"][ maxlength="(#ENV{maxlength})"][ disabled="(#ENV{disable})"][ readonly="(#ENV{readonly})"][(#ENV{obligatoire}|et{#HTML5}|oui) required="required"] />
+</BOUCLE_selection>
+</div>
+
+
+
+

@@ -1,0 +1,105 @@
+<?php
+
+// This is a SPIP language file  --  Ceci est un fichier langue de SPIP nommé  genere le NOW()
+// langue / language = fr
+
+$GLOBALS[$GLOBALS['idx_lang']] = array(
+	// A
+	'adresse'=>'Adresse',	
+	
+	// B
+	'belgique'=>'Belgique',		
+	'boite'=>'Bte',	
+		
+	
+	// C
+	'champ_obligatoire'=>'champs obligatoires',	
+	'champ_obligatoire_dipsonible'=>'un champ obligatoire parmi les disponibles',
+	'code'=>'Introduisez votre code de participation unique',
+	'code_postal'=>'Code postal',				
+	'concours'=>'Concours',
+	'conditions_ok'=>'J\'accepte le reglèment du concours',	
+	'confirmer_email'=>'Confirmer l\'email',					
+	'contact'=>'Contact',	
+	
+	//D
+	'date_naissance'=>'Date de naissance',	
+	
+	
+	//E
+	'email'=>'Email',
+	'erreur_code_inexistant'=>'Ce code n\'est pas reconnu par le système',		
+	'erreur_code_utilise'=>'Ce code a déjà été utilisé',	
+	'erreur_email_identique'=>'Cet email n\'est pas identique',			
+	'erreur_telephone'=>'Vous devez indiquez au moin un numéro de téléphone fixe ou gsm',	
+	'explication_date_naissance'=>'format : 00/00/0000',	
+			
+	//F
+	'fieldset_question_1'=>'Question 1',
+	'fieldset_question_2'=>'Question 2',	
+	'fieldset_question_3'=>'Question 3',				
+	'footer_produit'=>'Le code de participation unique se trouve sur les dépliants insérés dans les lots de 2 produits participants<br/>(dans la limite des stocks disponibles et du référencement des enseignes de la grande distribution):',				
+			
+	//G
+	'gsm'=>'GSM',	
+	
+	// I
+	'infos_personelles'=>'Informations personelles',
+	
+	// J
+	'jaccepte'=>'j \'accepte le ',
+	
+	
+	// L
+	'langue'=>'Langue',
+	'luxembourg'=>'Luxembourg',		
+	
+	// M	
+	'message_ok'=>'Merci pour votre participation',		
+	'mlle'=>'Mlle',		
+	'mme'=>'Mme',	
+	'mr'=>'Mr',	
+		
+	// N
+	'numero'=>'Num',		
+		
+	// O
+	'opt_out'=>'Je ne désire pas que mes coordonnées soient reprises dans votre fichier client',				
+	
+	// P
+	'pays'=>'Pays',		
+	'prenom'=>'Prénom',	
+		
+	// Q
+	'questions'=>'Questions',		
+	'question_2'=>'Cette année la marque Delacre fête ses :',	
+	'question_3'=>'Maître Devosse a mangé, sans se presser, 1  Sultana FruitBiscuit Naturel + subsidiaire	1 Delacre Schtroumpf + 1 Mini  BN Chocolat. Combien de temps lui a-t-il fallu pour manger ces 3 biscuits?',			
+	'question_1'=>'Qu’est-ce qui apparaît sur les biscuits Mini BN ?',					
+		
+	// R
+	'reglement'=>'règlement du concours',
+	'reponse_60'=>'60 ans',	
+	'reponse_100'=>'100 ans',	
+	'reponse_120'=>'120 ans',	
+	'reponse_centiemes_secondes'=>'centièmes de seconde',		
+	'reponses_corectes'=>'Les réponses corectes',						
+	'reponse_fleur'=>'une fleur',		
+	'reponse_minutes'=>'Minutes',
+	'reponse_secondes'=>'Secondes',			
+	'reponse_soleil'=>'un soleil',	
+	'reponse_sourire'=>'un sourire',		
+			
+	'rue'=>'Rue',			
+		
+	// S
+	'telephone'=>'Téléphone',				
+	
+	// T
+	'titre'=>'Titre',	
+	'titre_plugin'=>'Concours'	
+
+	
+
+
+);
+?>

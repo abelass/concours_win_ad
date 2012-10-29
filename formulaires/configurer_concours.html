@@ -1,0 +1,64 @@
+<!-- nom=concours -->
+
+<div class="formulaire_spip formulaire_#FORM">
+
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+
+	<form action="#ENV{action}" method="post"><div>
+		#ACTION_FORMULAIRE{#ENV{action}}
+		<ul>
+			<li class="fieldset">
+				<fieldset><legend><:concours:reponses_corectes:></legend>
+				<ul>
+					#SET{erreurs,#ENV**{erreurs}|table_valeur{question_1}}
+					<li class="editer_cfg_concours[ (#GET{erreurs}|oui)erreur]">
+						[<span class='erreur_message'>(#GET{erreurs})</span>]
+						<div  class="input">
+							<select name="question_1">
+							<option value=""></option>							
+							<option value="sourire"[ (#ENV{question_1}|=={sourire}|oui) selected="selected"]><:concours:reponse_sourire:></option>
+							<option value="fleur"[ (#ENV{question_1}|=={fleur}|oui) selected="selected"]><:concours:reponse_fleur:></option>
+							<option value="soleil"[ (#ENV{question_1}|=={soleil}|oui) selected="selected"]><:concours:reponse_soleil:></option>							
+							</select>
+							<label for='q_valeur_bon'><:concours:question_1:></label>
+						</div>
+					</li>
+					#SET{erreurs,#ENV**{erreurs}|table_valeur{question_2}}
+					<li class="editer_cfg_concours[ (#GET{erreurs}|oui)erreur]">
+						[<span class='erreur_message'>(#GET{erreurs})</span>]
+						<div class="input">
+						<select name="question_2">
+							<option value=""></option>							
+							<option value="60"[ (#ENV{question_2}|=={60}|oui) selected="selected"]><:concours:reponse_60:></option>			
+							<option value="100"[ (#ENV{question_2}|=={100}|oui) selected="selected"]><:concours:reponse_100:></option>
+							<option value="120"[ (#ENV{question_2}|=={120}|oui) selected="selected"]><:concours:reponse_120:></option>			
+							</select>
+							<label for='liste_compacte'><:concours:question_2:></label>
+						</div>
+					</li>					
+					#SET{erreurs,#ENV**{erreurs}|table_valeur{question_3}}
+					<li class="editer_cfg_concours[ (#GET{erreurs}|oui)erreur]">
+						[<span class='erreur_message'>(#GET{erreurs})</span>]
+
+						<div class="input">
+								
+							<input type="input" name="minutes" class="texte" value="#ENV{minutes}" id="minutes"/>
+							<label for='liste_compacte'><:concours:reponse_minutes:></label>
+							<input type="input" name="secondes" class="checkbox" value="#ENV{secondes}" id="secondes"/>
+							<label for='liste_compacte'><:concours:reponse_secondes:></label>
+							<input type="input" name="centieme_secondes" class="checkbox" value="#ENV{centieme_secondes}" id="centieme_secondes"/>			
+							<label for='liste_compacte'><:concours:reponses_centieme_secondes:></label>
+						</div>
+					</li>	
+				</fieldset>
+			</li>
+		</ul>
+		
+		<p class="boutons">
+			<input type="submit" name="_cfg_ok" class="submit" value="<:cfg:ok:>" />
+			<input type="submit" name="_cfg_delete" class="submit" value="<:cfg:effacer:>" />
+		</p>
+		
+	</div></form>
+</div>
